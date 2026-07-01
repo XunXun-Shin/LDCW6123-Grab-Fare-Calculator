@@ -163,6 +163,9 @@ int main()
     cout << "Estimated Fare : RM " << subtotal << endl;
     cout << "========================================" << endl;
 
+    cout << "\nThank you for using Grab!" << endl;
+    cout << "Have a safe journey!" << endl;
+
     cin.ignore();
     cin.get();
     return 0;
