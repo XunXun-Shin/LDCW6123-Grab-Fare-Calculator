@@ -62,12 +62,17 @@ int main()
     {
     case 1:
         subtotal = 2.00 + (distance * 0.80);
+        cout << "\nGrabBike Fare = RM "
+             << fixed << setprecision(2)
+             << subtotal << endl;
+        break;
+    case 2:
+        subtotal = 4.00 + (distance * 1.20);
+        cout << "\nGrabCar Fare = RM "
+             << fixed << setprecision(2)
+             << subtotal << endl;
         break;
     }
-
-    cout << "Fare = RM "
-         << fixed << setprecision(2)
-         << subtotal << endl;
 
     cin.ignore();
     cin.get();
