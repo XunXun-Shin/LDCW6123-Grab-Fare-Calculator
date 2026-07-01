@@ -78,6 +78,9 @@ int main()
              << fixed << setprecision(2)
              << subtotal << endl;
         break;
+    default:
+        cout << "\nError: Invalid vehicle type." << endl;
+        return 0;
     }
 
     cin.ignore();
