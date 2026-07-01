@@ -117,6 +117,11 @@ int main()
         }
     }
 
+    if (subtotal < 0)
+    {
+        subtotal = 0.00;
+    }
+
     cout << "\nCurrent Fare: RM "
          << fixed << setprecision(2)
          << subtotal << endl;
