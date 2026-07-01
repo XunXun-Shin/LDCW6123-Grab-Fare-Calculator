@@ -6,14 +6,16 @@ using namespace std;
 
 int main()
 {
+    double distance;
+    int carType;
 
     cout << "============================================" << endl;
     cout << "      WELCOME TO GRAB FARE CALCULATOR" << endl;
     cout << "============================================" << endl;
 
-    double distance;
     cout << "\nEnter Distance (KM): ";
     cin >> distance;
+
     if (cin.fail() || distance <= 0)
     {
         cout << "Error: Invalid distance." << endl;
@@ -21,7 +23,41 @@ int main()
         cin.get();
         return 0;
     }
+    cout << "\nDistance Accepted: " << distance << " KM" << endl;
+    
+    cout << "\nSelect Vehicle Type" << endl;
+    cout << "1. GrabBike" << endl;
+    cout << "2. GrabCar" << endl;
+    cout << "3. GrabPremium" << endl;
 
+    cout << "\nEnter Choice: ";
+    cin >> carType;
+    if (cin.fail() || carType < 1 || carType > 3)
+    {
+        cout << "Error: Invalid vehicle type." << endl;
+        cin.ignore();
+        cin.get();
+        return 0;
+    }
+
+    cout << "\nVehicle Selected: ";
+
+    switch (carType)
+    {
+    case 1:
+        cout << "GrabBike" << endl;
+        break;
+    case 2:
+        cout << "GrabCar" << endl;
+        break;
+    case 3:
+        cout << "GrabPremium" << endl;
+        break;
+    default:
+        cout << "Invalid Choice" << endl;
+    }
+    
+    cin.ignore();
     cin.get();
     return 0;
 }
