@@ -126,6 +126,43 @@ int main()
          << fixed << setprecision(2)
          << subtotal << endl;
 
+    cout << fixed << setprecision(2);
+
+    cout << "\n========================================" << endl;
+    cout << "           GRAB FARE RECEIPT" << endl;
+    cout << "========================================" << endl;
+
+    switch (carType)
+    {
+    case 1:
+        cout << "Vehicle Type : GrabBike" << endl;
+        break;
+
+    case 2:
+        cout << "Vehicle Type : GrabCar" << endl;
+        break;
+
+    case 3:
+        cout << "Vehicle Type : GrabPremium" << endl;
+        break;
+    }
+
+    cout << "Distance     : " << distance << " KM" << endl;
+
+    if (peakHour == 'Y' || peakHour == 'y')
+        cout << "Peak Hour    : Yes (RM 3.00 additional)" << endl;
+    else
+        cout << "Peak Hour    : No" << endl;
+
+    if (hasPromo == 'Y' || hasPromo == 'y')
+        cout << "Promo Code   : " << promoCode << " (RM 5.00 discount)" << endl;
+    else
+        cout << "Promo Code   : None" << endl;
+
+    cout << "----------------------------------------" << endl;
+    cout << "Estimated Fare : RM " << subtotal << endl;
+    cout << "========================================" << endl;
+
     cin.ignore();
     cin.get();
     return 0;
