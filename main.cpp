@@ -14,7 +14,14 @@ int main()
     double distance;
     cout << "\nEnter Distance (KM): ";
     cin >> distance;
-    
+    if (cin.fail() || distance <= 0)
+    {
+        cout << "Error: Invalid distance." << endl;
+        cin.ignore();
+        cin.get();
+        return 0;
+    }
+
     cin.get();
     return 0;
 }
