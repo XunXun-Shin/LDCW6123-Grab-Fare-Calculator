@@ -7,6 +7,7 @@ using namespace std;
 int main()
 {
     double distance;
+    double subtotal = 0;
     int carType;
 
     cout << "============================================" << endl;
@@ -56,7 +57,18 @@ int main()
     default:
         cout << "Invalid Choice" << endl;
     }
-    
+
+    switch (carType)
+    {
+    case 1:
+        subtotal = 2.00 + (distance * 0.80);
+        break;
+    }
+
+    cout << "Fare = RM "
+         << fixed << setprecision(2)
+         << subtotal << endl;
+
     cin.ignore();
     cin.get();
     return 0;
