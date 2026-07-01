@@ -87,6 +87,10 @@ int main()
     cout << "\nPeak Hour? (Y/N): ";
     cin >> peakHour;
 
+    if (peakHour == 'Y' || peakHour == 'y')
+    {
+        subtotal += 3.00;
+    }
     cout << "\nCurrent Fare: RM "
          << fixed << setprecision(2)
          << subtotal << endl;
