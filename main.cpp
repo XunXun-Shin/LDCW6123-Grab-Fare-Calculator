@@ -7,8 +7,9 @@ using namespace std;
 int main()
 {
     double distance;
-    double subtotal = 0;
+    double subtotal = 0.00;
     int carType;
+    char peakHour;
 
     cout << "============================================" << endl;
     cout << "      WELCOME TO GRAB FARE CALCULATOR" << endl;
@@ -82,6 +83,13 @@ int main()
         cout << "\nError: Invalid vehicle type." << endl;
         return 0;
     }
+
+    cout << "\nPeak Hour? (Y/N): ";
+    cin >> peakHour;
+
+    cout << "\nCurrent Fare: RM "
+         << fixed << setprecision(2)
+         << subtotal << endl;
 
     cin.ignore();
     cin.get();
