@@ -93,17 +93,22 @@ int main()
     {
         subtotal += 3.00;
     }
+
+    cout << "\nCurrent Fare: RM "
+         << fixed << setprecision(2)
+         << subtotal << endl;
     
     cout << "\nDo you have a promo code? (Y/N): ";
     cin >> hasPromo;
 
     if (hasPromo == 'Y' || hasPromo == 'y')
     {
-        cout << "Enter Promo Code: ";
+        cout << "\nEnter Promo Code: ";
         cin >> promoCode;
-        
+
         if (promoCode == "GRAB5")
         {
+            subtotal -= 5.00;
             cout << "\nPromo code accepted!" << endl;
         }
         else
