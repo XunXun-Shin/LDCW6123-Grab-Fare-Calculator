@@ -11,6 +11,7 @@ int main()
     int carType;
     char peakHour;
     char hasPromo;
+    string promoCode;
 
     cout << "============================================" << endl;
     cout << "      WELCOME TO GRAB FARE CALCULATOR" << endl;
@@ -95,6 +96,12 @@ int main()
     
     cout << "\nDo you have a promo code? (Y/N): ";
     cin >> hasPromo;
+    
+    if (hasPromo == 'Y' || hasPromo == 'y')
+    {
+        cout << "Enter Promo Code: ";
+        cin >> promoCode;
+    }
 
     cout << "\nCurrent Fare: RM "
          << fixed << setprecision(2)
