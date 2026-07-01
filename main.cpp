@@ -10,6 +10,7 @@ int main()
     double subtotal = 0.00;
     int carType;
     char peakHour;
+    char hasPromo;
 
     cout << "============================================" << endl;
     cout << "      WELCOME TO GRAB FARE CALCULATOR" << endl;
@@ -91,6 +92,10 @@ int main()
     {
         subtotal += 3.00;
     }
+    
+    cout << "\nDo you have a promo code? (Y/N): ";
+    cin >> hasPromo;
+
     cout << "\nCurrent Fare: RM "
          << fixed << setprecision(2)
          << subtotal << endl;
