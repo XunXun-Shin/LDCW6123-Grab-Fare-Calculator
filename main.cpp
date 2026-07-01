@@ -11,6 +11,10 @@ int main()
     cout << "      WELCOME TO GRAB FARE CALCULATOR" << endl;
     cout << "============================================" << endl;
 
+    double distance;
+    cout << "\nEnter Distance (KM): ";
+    cin >> distance;
+    
     cin.get();
     return 0;
 }
