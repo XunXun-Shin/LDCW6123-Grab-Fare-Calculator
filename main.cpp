@@ -72,6 +72,12 @@ int main()
              << fixed << setprecision(2)
              << subtotal << endl;
         break;
+    case 3:
+        subtotal = 8.00 + (distance * 2.50);
+        cout << "\nGrabPremium Fare = RM "
+             << fixed << setprecision(2)
+             << subtotal << endl;
+        break;
     }
 
     cin.ignore();
