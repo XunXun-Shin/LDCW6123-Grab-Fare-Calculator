@@ -96,11 +96,20 @@ int main()
     
     cout << "\nDo you have a promo code? (Y/N): ";
     cin >> hasPromo;
-    
+
     if (hasPromo == 'Y' || hasPromo == 'y')
     {
         cout << "Enter Promo Code: ";
         cin >> promoCode;
+        
+        if (promoCode == "GRAB5")
+        {
+            cout << "\nPromo code accepted!" << endl;
+        }
+        else
+        {
+            cout << "\nInvalid promo code." << endl;
+        }
     }
 
     cout << "\nCurrent Fare: RM "
