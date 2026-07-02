@@ -31,7 +31,7 @@ int main()
 
         return 0;
     }
-    cout << "\nDistance Accepted: " << distance << " KM" << endl;
+    cout << "Distance Accepted: " << distance << " KM" << endl;
     
     cout << "\nPress Enter to continue...";
     cin.ignore();
@@ -58,7 +58,7 @@ int main()
         return 0;
     }
 
-    cout << "\nVehicle Selected: ";
+    cout << "Vehicle Selected: ";
 
     switch (carType)
     {
@@ -79,19 +79,19 @@ int main()
     {
     case 1:
         subtotal = 2.00 + (distance * 0.80);
-        cout << "\nGrabBike Fare = RM "
+        cout << "GrabBike Fare = RM "
              << fixed << setprecision(2)
              << subtotal << endl;
         break;
     case 2:
         subtotal = 4.00 + (distance * 1.20);
-        cout << "\nGrabCar Fare = RM "
+        cout << "GrabCar Fare = RM "
              << fixed << setprecision(2)
              << subtotal << endl;
         break;
     case 3:
         subtotal = 8.00 + (distance * 2.50);
-        cout << "\nGrabPremium Fare = RM "
+        cout << "GrabPremium Fare = RM "
              << fixed << setprecision(2)
              << subtotal << endl;
         break;
@@ -111,13 +111,13 @@ int main()
     cout << "=======================================" << endl;
 
     cout << "\nPeak Hour rides (additional RM 3.00 charge)" << endl;
-    cout << "\nAre you travelling during Peak Hour? (Y/N): ";
+    cout << "Are you travelling during Peak Hour? (Y/N): ";
     cin >> peakHour;
 
     if (peakHour == 'Y' || peakHour == 'y')
     {
         subtotal += 3.00;
-        cout << "\nRM 3.00 additional charge applied." << endl;
+        cout << "RM 3.00 additional charge applied." << endl;
     }
 
     cout << "\nCurrent Fare: RM "
@@ -148,11 +148,11 @@ int main()
         if (promoCode == "GRAB5")
         {
             subtotal -= 5.00;
-            cout << "\nPromo code accepted! (RM 5.00 discount)" << endl;
+            cout << "Promo code accepted! (RM 5.00 discount)" << endl;
         }
         else
         {
-            cout << "\nInvalid promo code." << endl;
+            cout << "Invalid promo code." << endl;
         }
     }
 
@@ -180,7 +180,7 @@ int main()
     switch (carType)
     {
     case 1:
-        cout << "Vehicle Type : GrabBike" << endl;
+        cout << "\nVehicle Type : GrabBike" << endl;
         break;
 
     case 2:
@@ -204,7 +204,7 @@ int main()
     else
         cout << "Promo Code   : None" << endl;
 
-    cout << "----------------------------------------" << endl;
+    cout << "\n----------------------------------------" << endl;
     cout << "Estimated Fare : RM " << subtotal << endl;
     cout << "========================================" << endl;
 
