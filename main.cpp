@@ -17,6 +17,9 @@ int main()
     cout << "      WELCOME TO GRAB FARE CALCULATOR" << endl;
     cout << "============================================" << endl;
 
+    cout << "\nPlease enter your travel distance in KM." << endl;
+    cout << "Example: \n5 = 5 KM, \n12.5 = 12.5 KM" << endl;
+
     cout << "\nEnter Distance (KM): ";
     cin >> distance;
 
@@ -25,14 +28,25 @@ int main()
         cout << "Error: Invalid distance." << endl;
         cin.ignore();
         cin.get();
+
         return 0;
     }
     cout << "\nDistance Accepted: " << distance << " KM" << endl;
     
-    cout << "\nSelect Vehicle Type" << endl;
-    cout << "1. GrabBike" << endl;
-    cout << "2. GrabCar" << endl;
-    cout << "3. GrabPremium" << endl;
+    cout << "\nPress Enter to continue...";
+    cin.ignore();
+    cin.get();
+
+    system("cls");
+
+    cout << "========================================" << endl;
+    cout << "        Vehicle Selection Menu" << endl;
+    cout << "========================================" << endl;
+    
+    cout << "\nChoose your preferred Grab service." << endl;
+    cout << "1. GrabBike \nBase Fare : RM2.00 \nRate      : RM0.80 per KM" << endl;
+    cout << "2. GrabCar \nBase Fare : RM4.00 \nRate      : RM1.20 per KM" << endl;
+    cout << "3. GrabPremium \nBase Fare : RM8.00 \nRate      : RM2.50 per KM" << endl;
 
     cout << "\nEnter Choice: ";
     cin >> carType;
@@ -86,30 +100,55 @@ int main()
         return 0;
     }
 
-    cout << "\nPeak Hour? (Y/N): ";
+    cout << "\nPress Enter to continue...";
+    cin.ignore();
+    cin.get();
+
+    system("cls");
+
+    cout << "=======================================" << endl;
+    cout << "          PEAK HOUR SURCHARGE" << endl;
+    cout << "=======================================" << endl;
+
+    cout << "\nPeak Hour rides (additional RM 3.00 charge)" << endl;
+    cout << "\nAre you travelling during Peak Hour? (Y/N): ";
     cin >> peakHour;
 
     if (peakHour == 'Y' || peakHour == 'y')
     {
         subtotal += 3.00;
+        cout << "\nRM 3.00 additional charge applied." << endl;
     }
 
     cout << "\nCurrent Fare: RM "
          << fixed << setprecision(2)
          << subtotal << endl;
+
+    cout << "\nPress Enter to continue...";
+    cin.ignore();
+    cin.get();
+
+    system("cls");
     
-    cout << "\nDo you have a promo code? (Y/N): ";
+    cout << "========================================" << endl;
+    cout << "               Promo Code" << endl;
+    cout << "========================================" << endl;
+
+    cout << "\nDo you have a Grab promo code? (Y/N): ";
     cin >> hasPromo;
 
     if (hasPromo == 'Y' || hasPromo == 'y')
     {
+        cout << "\n========================================" << endl;
+        cout << "            ENTER PROMO CODE" << endl;
+        cout << "========================================" << endl;
         cout << "\nEnter Promo Code: ";
         cin >> promoCode;
 
         if (promoCode == "GRAB5")
         {
             subtotal -= 5.00;
-            cout << "\nPromo code accepted!" << endl;
+            cout << "\nPromo code accepted! (RM 5.00 discount)" << endl;
         }
         else
         {
@@ -125,6 +164,12 @@ int main()
     cout << "\nCurrent Fare: RM "
          << fixed << setprecision(2)
          << subtotal << endl;
+
+    cout << "\nPress Enter to continue...";
+    cin.ignore();
+    cin.get();
+
+    system("cls");
 
     cout << fixed << setprecision(2);
 
